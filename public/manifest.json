@@ -1,0 +1,30 @@
+{
+	"name": "Wallpaper-Abyss Bulk Downloader",
+	"description": "Bulk download wallpapers from Wallpaper-Abyss.",
+	"version": "2.0",
+	"manifest_version": 2,
+	"permissions": [
+		"downloads"
+	],
+	"content_scripts": [
+		{
+			"matches": [
+				"https://wall.alphacoders.com/*"
+			],
+			"js": [
+				"build/dom.js"
+			]
+		}
+	],
+	"background": {
+		"scripts": [
+			"build/background.js"
+		],
+		"persistent": false
+	},
+	"browser_specific_settings": {
+		"gecko": {
+			"id": "wallpaper.abyss.bulk@totto.tk"
+		}
+	}
+}
